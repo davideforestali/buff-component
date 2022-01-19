@@ -1,0 +1,129 @@
+.Buff {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: fixed;
+  bottom: 5rem;
+  left: 1rem;
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 600ms;
+  max-width: 25rem;
+}
+
+.Buff.show {
+  opacity: 1;
+  max-height: 100rem;
+}
+
+.answersList {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -.5rem;
+}
+
+.answersList li {
+  width: 50%;
+  padding: .5rem;
+  position: relative;
+}
+.answersList .questionIndex {
+  width: 1.7rem;
+  height: 1.7rem;
+  background-color: #383838f2;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 0.5rem;
+  position: absolute;
+  left: 0.8rem;
+  top: 0.6rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answersList button {
+  padding: .5rem .5rem .5rem 2rem;
+  width: 100%;
+  border: none;
+  border-radius: 2rem;
+  background-color: #ffffffc7;
+}
+.answersList button.correct {
+  background-color: green;
+}
+.answersList button.incorrect {
+  background-color: red;
+}
+.answersList button.correct,
+.answersList button.incorrect {
+  animation: blinker .5s linear 3;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.countdown {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: white;
+}
+.countdown.hidden {
+  opacity: 0;
+}
+
+.Buff .author {
+  padding: 0.2rem;
+  width: fit-content;
+  border: none;
+  border-radius: 2rem;
+  background-color: #ffffffc7;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.Buff .authorImageContainer {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: .5rem;
+}
+.Buff .author img {
+  width: 100%;
+}
+.Buff .author span {
+  margin-right: 1rem;
+}
+
+.Buff .questionContainer {
+  background-color: #000000ad;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+}
+.Buff .questionContainer p {
+  color: white;
+  font-weight: 700;
+  margin: 0;
+  padding-right: 2rem;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  background-color: #505050b0;
+}

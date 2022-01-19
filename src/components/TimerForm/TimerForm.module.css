@@ -1,0 +1,43 @@
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #0000008a;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  transform: translateY(100vh);
+}
+
+.TimerForm {
+  position: fixed;
+  z-index: 99;
+  background-color: white;
+  border-radius: .5rem;
+  width: 400px;
+  max-width: 90%;
+  padding: 1rem;
+  left: 50%;
+  top: 25%;
+  text-align: center;
+  transition: all 600ms;
+  transform: translate(-50%, -100vh);
+  opacity: 0;
+}
+
+.backdrop.show {
+  transform: translateY(0);
+}
+.TimerForm.show {
+  transform: translate(-50%, 0);
+  opacity: 1
+} 
+
+.TimerForm .title {
+  margin: 0;
+}
+
+.TimerForm p {
+  font-size: .75rem;
+  color: #979797;
+}

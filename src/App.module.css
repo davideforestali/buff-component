@@ -1,0 +1,24 @@
+.PlayerContainer {
+    position: relative;
+}
+
+.networkErrorMsg {
+    padding: 1rem 3rem;
+    background-color: #ff5757;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    border: 2px solid #dd0808;
+    z-index: 9;
+}
+
+.video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
